@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import zy.community.Model.User;
+import zy.community.model.User;
 import zy.community.dto.AccessTokenDTO;
 import zy.community.dto.GithubUser;
 import zy.community.mapper.UserMapper;

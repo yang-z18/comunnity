@@ -5,17 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import zy.community.Model.Question;
-import zy.community.Model.User;
 import zy.community.dto.PaginationDTO;
-import zy.community.dto.QuestionDTO;
 import zy.community.mapper.QuestionMapper;
 import zy.community.mapper.UserMapper;
 import zy.community.service.QuestionService;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @Controller
 public class IndexController {

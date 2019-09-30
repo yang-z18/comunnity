@@ -8,7 +8,7 @@
         <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>life.majiang.community</groupId>
+    <groupId>zy.community</groupId>
     <artifactId>community</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>community</name>
@@ -100,6 +100,7 @@
     </dependencies>
 
     <build>
+        <defaultGoal>compile</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -109,6 +110,11 @@
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
+                <configuration>
+                    <url>${db.url}</url>
+                    <user>${db.user}</user>
+                    <password>${db.password}</password>
+                </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>mysql</groupId>
@@ -131,6 +137,11 @@
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
                         <version>1.4.199</version>
+                    </dependency>
+                    <dependency><groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <!--<scope>runtime</scope>-->
+                        <version>5.1.45</version>
                     </dependency>
                 </dependencies>
             </plugin>

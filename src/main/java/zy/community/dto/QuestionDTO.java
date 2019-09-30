@@ -1,7 +1,7 @@
 package zy.community.dto;
 
 import lombok.Data;
-import zy.community.Model.User;
+import zy.community.model.User;
 
 @Data
 public class QuestionDTO {

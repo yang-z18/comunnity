@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import zy.community.Model.User;
+import zy.community.model.User;
 import zy.community.dto.PaginationDTO;
 import zy.community.service.QuestionService;
 
