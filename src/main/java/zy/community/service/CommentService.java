@@ -2,6 +2,7 @@ package zy.community.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import zy.community.enums.CommentTypeEnum;
 import zy.community.exception.CustomizeErrorCode;
 import zy.community.exception.CustomizeException;
@@ -22,6 +23,7 @@ public class CommentService {
     private CommentMapper commentMapper;
     @Autowired
     private QuestionExtMapper questionExtMapper;
+    @Transactional
     public void insert(Comment comment) {
         if (comment.getParentId()==null||comment.getParentId()==0){
             throw new CustomizeException(CustomizeErrorCode.TARGET_PARAM_NOT_FOUND);
