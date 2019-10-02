@@ -1,4 +1,5 @@
 package zy.community.dto;
+
 import lombok.Data;
 import zy.community.model.User;
 
@@ -15,3 +16,4 @@ public class CommentDTO {
     private String content;
     private User user;
 }
+
